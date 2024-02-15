@@ -1,25 +1,30 @@
-body {
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
 .headImg {
-    margin: 10px 20%;
+    background-color: black;
     display: flex;
     justify-content: space-between;
 }
 
 .headRedes {
+    margin: 10px 20%;
     display: flex;
+    align-items: center;
 }
 
 .headRedes img {
     width: 20px;
     margin-right: 20px;
 }
+
 .headMenu {
     width: 20px;
+    margin-top: 10px;
+    margin-right: 20%;
 }
 
 .headLogo{
@@ -28,9 +33,35 @@ body {
 }
 
 .headLogo a{
-    margin-bottom: 15px;
-    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0;
     font-size: 50px;
+    font-weight: bold;
     text-decoration: none;
     color: black;
+    text-shadow: 5px 0px 7px rgba(109, 63, 11, 0.705);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+.navBar {
+    width: 900px;
+    background-color: rgba(0, 0, 0, 0.623);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navLink{
+    margin: 10px 30px;
+}
+
+.navLink a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
