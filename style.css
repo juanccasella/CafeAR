@@ -1,46 +1,67 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-.headImg {
-    background-color: black;
+/* HEAD */
+
+.headTop {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    padding: 5px 20px;
 }
 
-.headRedes {
-    margin: 10px 20%;
+/* HEADREDES, MENU Y LOGO1*/
+
+.headRedes{
     display: flex;
     align-items: center;
 }
 
-.headRedes img {
+.headRedes img, .headMenu img {
     width: 20px;
-    margin-right: 20px;
+    margin: 5px;
 }
 
-.headMenu {
-    width: 20px;
-    margin-top: 10px;
-    margin-right: 20%;
+.headLogo1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.headLogo{
+.headLogo1 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 60px;
+}
+
+
+
+
+/* LOGO2 */
+
+.headLogo2{
     display: flex;
     justify-content: center;
 }
 
-.headLogo a{
+.headLogo2 a{
     font-family: 'Montserrat', sans-serif;
     margin: 15px 0;
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     color: black;
-    text-shadow: 5px 0px 7px rgba(109, 63, 11, 0.705);
 }
+
+
+
+
+/* NAV */
 
 nav {
     display: flex;
@@ -49,7 +70,7 @@ nav {
 
 
 .navBar {
-    width: 900px;
+    width: 70%;
     background-color: rgba(0, 0, 0, 0.623);
     display: flex;
     justify-content: center;
@@ -65,3 +86,4 @@ nav {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
