@@ -11,10 +11,10 @@
     <header>
         <div class="headTop">
             <div class="headRedes">
-                <a href="https://www.facebook.com/" target="_blank"><img src="./images/redesSvg/facebook.svg" alt=""></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="./images/redesSvg/instagram.svg" alt=""></a>
-                <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><img src="./images/redesSvg/mail.svg" alt=""></a>
-                <a href="https://twitter.com/" target="_blank"><img src="./images/redesSvg/twitter.svg" alt=""></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
             </div>
             <div class="headLogo1">
             <a href="index.html">CAFÉAR</a ><!-- En un futuro va a ser una img -->
@@ -23,19 +23,23 @@
             <label for="menu" class="headMenu">
                 <i class="fa-solid fa-circle-chevron-down"></i>
             </label>
-            <!-- <div class="headMenu">
-                <img src="./images/menu.svg" alt="">
-            </div> -->
         </div>    
         <div class="headLogo2">
             <a href="index.html">CAFÉAR</a ><!-- En un futuro va a ser una img -->
         </div>
         <nav>
-            <ul class="navBar">
+            <ul class="navBar" id="navBar">
                 <li class="navLink"><a href="./pages/historia.html">Historia</a></li>
                 <li class="navLink"><a href="./pages/granos.html">Granos</a></li>
                 <li class="navLink"><a href="./pages/cafeteras.html">Cafeteras</a></li>
                 <li class="navLink"><a href="./pages/tiposDeCafe.html">Tipos de café</a></li>
+                <li class="navLink"><a href="">Redes</a></li>
+                    <div class="redes-container">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
             </ul>
         </nav>
     </header>
@@ -44,5 +48,24 @@
     </section>
     <footer>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuCheckbox = document.getElementById('menu');
+            var navBar = document.querySelector('.navBar');
+    
+            menuCheckbox.addEventListener('change', function () {
+                if (menuCheckbox.checked) {
+                    navBar.style.right = '0';
+                } else {
+                    navBar.style.right = '-100%';
+                }
+
+                // PRUEBA:
+                redesLink.addEventListener('click', function () {
+                redesLink.classList.toggle('active');
+            });
+            });
+        });
+    </script>
 </body>
 </html> 
