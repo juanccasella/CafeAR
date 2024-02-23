@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="./images/icon/bean1.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>CafeAR</title>
 </head>
 <body>
@@ -29,17 +31,22 @@
         </div>
         <nav>
             <ul class="navBar" id="navBar">
-                <li class="navLink"><a href="./pages/historia.html">Historia</a></li>
-                <li class="navLink"><a href="./pages/granos.html">Granos</a></li>
-                <li class="navLink"><a href="./pages/cafeteras.html">Cafeteras</a></li>
-                <li class="navLink"><a href="./pages/tiposDeCafe.html">Tipos de café</a></li>
-                <li class="navLink"><a href="">Redes</a></li>
-                    <div class="redes-container">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-                    </div>
+                <li class="navLink"><a href="./pages/historia.html">HISTORIA</a></li>
+                <li class="navLink"><a href="./pages/granos.html">GRANOS</a></li>
+                <li class="navLink"><a href="./pages/cafeteras.html">CAFETERAS</a></li>
+                <li class="navLink"><a href="./pages/tiposDeCafe.html">INFUSIONES</a></li>
+                <li class="navLink"><a href="./pages/foro.html">FORO</a></li>
+                <div class="dropdown redes-dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        REDES
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> FACEBOOK</a></li>
+                        <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> INSTAGRAM</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i> GMAIL</a></li>
+                        <li><a class="dropdown-item" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i> TWITTER</a></li>
+                    </ul>
+                </div>
             </ul>
         </nav>
     </header>
@@ -48,6 +55,7 @@
     </section>
     <footer>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var menuCheckbox = document.getElementById('menu');
@@ -59,11 +67,6 @@
                 } else {
                     navBar.style.right = '-100%';
                 }
-
-                // PRUEBA:
-                redesLink.addEventListener('click', function () {
-                redesLink.classList.toggle('active');
-            });
             });
         });
     </script>
