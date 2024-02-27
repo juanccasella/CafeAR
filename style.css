@@ -26,15 +26,18 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 75px;
 }
 
-
+.headTop div{
+    width: 200px;
+}
 
 /* HEADREDES*/
 
 .headRedes{
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     font-size: 12px;
 }
@@ -70,6 +73,9 @@ body{
 }
 
 /* MENU HAMBURGESA */
+.menuHamburgesa{
+    display: none;
+}
 
 .headMenu {
     width: 150px;
@@ -101,17 +107,30 @@ body{
 }
 
 .buscadorLupa{
-    width: 50px;
+    width: auto;
+    background-color: transparent;
+    border: none;
+}
+
+.buscadorLupa i{
+    color: var(--color-1);
+}
+
+.buscadorLupa i:hover{
+    color: var(--color-2);
 }
 
 /* NAVBAR */
 
 nav {
-    margin: 0 10%;
+    width: 80%;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .navBar {
-    border-top: 1px solid var(--color-1);
+    width: 100%;
+    border-top: 0.5px solid var(--color-5);
     padding-left: 0;
     display: flex;
     justify-content: space-around;
@@ -136,7 +155,6 @@ nav {
     background-color: transparent;
 }
 
-
 /* NAVBAR DROPDOWN */
 
 .dropdown a{
@@ -150,9 +168,6 @@ nav {
     border-color: var(--color-5);
 }
 
-
-
-/* Anula los estilos :active de Bootstrap para el botón "Redes" */
 .redes-dropdown:active,
 .redes-dropdown:focus,
 .btn-secondary {
@@ -160,11 +175,20 @@ nav {
     border-color: transparent !important;
 }
 
+.dropdown-menu.show {
+    background-color: var(--color-5);
+    padding: 0px !important;
+}
 
+.dropdown-item {
+    background-color: transparent !important;
+}
 
-
-
-
+.dropdown-item:hover {
+    background-color: var(--color-2) !important;
+    color: var(--color-6) !important;
+    border-radius: 0.25rem;
+}
 
 
 
@@ -180,6 +204,14 @@ nav {
 
 @media (max-width: 700px){ /*Esto va en 700px*/
     
+    .menuHamburgesa{
+        display: flex;
+    }
+
+    .headRedes {
+        display: none;
+    }
+
     .headTop {
         justify-content: space-around;
     }
@@ -220,10 +252,5 @@ nav {
     .navLink a:hover, .dropdown a:hover{
         color: var(--color-5);
         background-color: var(--color-1) !important;   
-    }
-
-    .dropdown-menu{
-        display: block;
-        justify-content: center;
     }
 }
