@@ -22,7 +22,9 @@ body{
 
 
 /* HEADER */
+
 .headTop {
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,7 +32,7 @@ body{
 }
 
 .headTop div{
-    width: 200px;
+    width: 300px;
 }
 
 /* HEADREDES*/
@@ -39,11 +41,11 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .headRedes a i {
-    margin: 5px;
+    margin: 8px;
     color: var(--color-1);
 }
 
@@ -62,7 +64,7 @@ body{
 
 .headLogo a{
     margin: 15px 0;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     color: var(--color-1);
@@ -103,7 +105,7 @@ body{
 /* BUSCADOR */
 
 .buscadorTexto{
-    width: 150px;
+    width: 250px;
 }
 
 .buscadorLupa{
@@ -123,9 +125,9 @@ body{
 /* NAVBAR */
 
 nav {
-    width: 80%;
-    /* display: flex;
-    justify-content: space-between; */
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 40px ;
 }
 
 .navBar {
@@ -143,7 +145,7 @@ nav {
 }
 
 .navLink a, .btn {
-    font-size: 10px;
+    font-size: 20px;
     text-decoration: none;
     color: var(--color-1);
     background-color: transparent;
@@ -203,7 +205,45 @@ nav {
 /* RESPONSIVE PARA CELULARES */
 
 @media (max-width: 700px){ /*Esto va en 700px*/
+
+    .menuHamburgesa{
+        display: block;
+    }
+
+    .headMenu {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+    }
     
+    .navBar {
+        position: fixed;
+        width: 100%;
+        height: 80vh;
+        background-color: var(--color-4);
+        border-top: none;
+        padding-left: 0;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+    
+    .navLink, .dropdown{
+        display: block;
+    }
+
+    .navLink a:hover, .navLink a:active{
+        background: none;
+    }
+
+    #menu:checked ~ nav .navBar {
+        transform: translateX(0);
+        right: -100%;
+    }
+}
+/*     
     .menuHamburgesa{
         display: flex;
     }
@@ -252,5 +292,4 @@ nav {
     .navLink a:hover, .dropdown a:hover{
         color: var(--color-5);
         background-color: var(--color-1) !important;   
-    }
-}
+    } */
