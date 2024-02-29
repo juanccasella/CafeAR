@@ -19,50 +19,54 @@ body{
     background-color: var(--color-6) !important;
 }
 
-
-
 /* HEADER */
-
-.headTop {
-    margin-top: 40px;
+header{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+/* NAVTOP */
+
+.navTop {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 75px;
 }
 
-.headTop div{
+.navTop div{
     width: 300px;
 }
 
-/* HEADREDES*/
+/* TOPREDES*/
 
-.headRedes{
+.topRedes{
     height: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
+    text-align: center;
+    font-size: 19px;
 }
 
-.headRedes a i {
-    margin: 8px;
+.topRedes a i {
+    margin: 5px;
     color: var(--color-1);
 }
 
 
-.headRedes a i:hover{
+.topRedes a i:hover{
     color: var(--color-2);
 }
 
 
-/* HEADLOGO */
+/* TOPLOGO */
 
-.headLogo{
+.topLogo{
     display: flex;
     justify-content: center;
 }
 
-.headLogo a{
+.topLogo a{
     margin: 15px 0;
     font-size: 50px;
     font-weight: bold;
@@ -70,39 +74,12 @@ body{
     color: var(--color-1);
 }
 
-.headLogo a:hover{
+.topLogo a:hover{
     color: var(--color-2);
 }
 
-/* MENU HAMBURGESA */
-.menuHamburgesa{
-    display: none;
-}
 
-.headMenu {
-    width: 150px;
-    font-size: 13px;
-    margin: 5px;
-    color: var(--color-1);
-    cursor: pointer;
-    display: none;
-}
-
-.headMenu i{
-    display: flex;
-    justify-content: center;
-    color: var(--color-1);
-}
-
-.headMenu i:hover{
-    color: var(--color-2);
-}
-
-#menu {
-    display: none;
-}
-
-/* BUSCADOR */
+/* TOPBUSCADOR */
 
 .buscadorTexto{
     width: 250px;
@@ -122,19 +99,41 @@ body{
     color: var(--color-2);
 }
 
+/* MENU HAMBURGESA */
+
+.menuHamburgesa {
+    width: 150px;
+    font-size: 13px;
+    margin: 5px;
+    color: var(--color-1);
+    cursor: pointer;
+    /* display: none; */
+
+}
+
+.menuHamburgesa i{
+    display: flex;
+    justify-content: center;
+    color: var(--color-1);
+}
+
+.menuHamburgesa i:hover{
+    color: var(--color-2);
+}
+
+#check {
+    display: none;
+}
+
+
 /* NAVBAR */
 
-nav {
+.navBar {    
     width: 70%;
     margin: 0 auto;
     padding-top: 40px ;
-}
-
-.navBar {
-    width: 100%;
     border-top: 0.5px solid var(--color-5);
-    padding-left: 0;
-    display: flex;
+    display: block;
     justify-content: space-around;
     list-style: none;
 }
@@ -193,8 +192,6 @@ nav {
 }
 
 
-
-
 /* RESPONSIVE PARA TABLETS */
 
 @media (max-width: 1024px){
@@ -206,90 +203,68 @@ nav {
 
 @media (max-width: 700px){ /*Esto va en 700px*/
 
-    .menuHamburgesa{
-        display: block;
-    }
-
-    .headMenu {
-        display: block;
-    }
-
-    nav {
-        width: 100%;
-    }
-    
-    .navBar {
-        position: fixed;
-        width: 100%;
-        height: 80vh;
-        background-color: var(--color-4);
-        border-top: none;
-        padding-left: 0;
-        display: block;
-        transform: translateX(-100%);
-        transition: transform 1s;
-    }
-    
-    .navLink, .dropdown{
-        display: block;
-    }
-
-    .navLink a:hover, .navLink a:active{
-        background: none;
-    }
-
-    #menu:checked ~ nav .navBar {
-        transform: translateX(0);
-        right: -100%;
-    }
-}
-/*     
-    .menuHamburgesa{
+    header {
         display: flex;
+        flex-wrap: nowrap;
     }
 
-    .headRedes {
+    .navTop {
+        display: inline;
+    }
+
+    .navTop div{
+        width: 100%;
+    }
+
+    .topRedes {
         display: none;
     }
 
-    .headTop {
-        justify-content: space-around;
+    .navBottom {
+        /* display: inline; */
+        text-align: end;
     }
 
-    
-    .headLogo a{
-        display: block !important;
-        margin: 10px 0;
+    .navBar {
+        display: none;
     }
 
-    .headMenu {
-        display: block !important;
-    }
-
-    .navBar{
-        margin: 0;
-        background-color: var(--color-5);
-        position: fixed;
-        display: block;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        transition: 1s;
-    }
-
-    .navLink, .dropdown {
-        margin: 30px 0;
-        line-height: 30px;
-        }
-
-    .navLink a, .dropdown a{
-        padding: 0;
-        display: block;
-        width: 100%;
-        font-size: 15px;
-    }
-    
-    .navLink a:hover, .dropdown a:hover{
-        color: var(--color-5);
-        background-color: var(--color-1) !important;   
+    /* .navBottom {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
     } */
+    
+}
+
+/* .menuHamburgesa {
+    display: block;
+}
+
+nav {
+    width: 100%;
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--color-4);
+    border-top: none;
+    padding-left: 0;
+    display: block;
+    right: -100%;
+    transition: transform 1s;
+}
+
+.navLink, .dropdown{
+    display: block;
+}
+
+.navLink a:hover, .navLink a:active{
+    background: none;
+}
+#check:checked ~ .navBar {
+    right: 0;
+}
+*/

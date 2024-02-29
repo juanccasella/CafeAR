@@ -11,28 +11,22 @@
 </head>
 <body>
     <header>
-        <div class="headTop">
-            <div class="headRedes">
+        <div class="navTop">
+            <div class="topRedes">
                 <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                 <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
             </div>
-            <div class="headLogo">
+            <div class="topLogo">
                 <a href="index.html">CAFÉAR</a ><!-- En un futuro va a ser una img -->
             </div>
-            <div class="buscador">
+            <div class="topBuscador">
                 <input class="buscadorTexto" type="text" placeholder="Buscar...">
                 <button class="buscadorLupa"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="menuHamburgesa">
-                <input type="checkbox" id="menu">
-                <label for="menu" class="headMenu">
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                </label>
-            </div>  
-        </div>    
-        <nav>
+        </div>
+        <div class="navBottom">  
             <ul class="navBar" id="navBar">
                 <li class="navLink"><a href="./pages/historia.html">HISTORIA</a></li>
                 <li class="navLink"><a href="./pages/granos.html">GRANOS</a></li>
@@ -45,16 +39,16 @@
                             <li><a class="dropdown-item" href="#" target="_blank">INMERSIÓN</a></li>
                             <li><a class="dropdown-item" href="#" target="_blank">GOTEO</a></li>
                         </ul>
-                </li>
-                <li class="navLink"><a href="./pages/tiposDeCafe.html">RECETAS</a></li>
-                <li class="navLink"><a href="./pages/foro.html">FORO</a></li>
-                <li class="navLink">
-                    <div class="dropdown redes-dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            REDES
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> FACEBOOK</a></li>
+                    </li>
+                    <li class="navLink"><a href="./pages/tiposDeCafe.html">RECETAS</a></li>
+                    <li class="navLink"><a href="./pages/foro.html">FORO</a></li>
+                    <li class="navLink">
+                        <div class="dropdown redes-dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                REDES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> FACEBOOK</a></li>
                             <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> INSTAGRAM</a></li>
                             <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i> GMAIL</a></li>
                             <li><a class="dropdown-item" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i> TWITTER</a></li>
@@ -62,7 +56,11 @@
                     </div>
                 </li>
             </ul>
-        </nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="menuHamburgesa">
+                <i class="fa-solid fa-circle-chevron-down"></i>
+            </label> 
+        </div>  
     </header>
     <section>
         
@@ -70,19 +68,5 @@
     <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuCheckbox = document.getElementById('menu');
-            var navBar = document.querySelector('.navBar');
-    
-            menuCheckbox.addEventListener('change', function () {
-                if (menuCheckbox.checked) {
-                    navBar.style.right = '0';
-                } else {
-                    navBar.style.right = '-100%';
-                }
-            });
-        });
-    </script> -->
 </body>
 </html> 
