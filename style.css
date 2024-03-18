@@ -5,7 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
 :root {
     --color-1: #F2F0D5;
     --color-2: #D9CD91;
@@ -19,6 +18,7 @@ body{
     background-color: var(--color-6) !important;
 }
 
+
 /* HEADER */
 header{
     display: flex;
@@ -27,9 +27,8 @@ header{
 
 
 /* NAVTOP */
-
 .navTop {
-    margin-top: 30px;
+    margin: 10px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,13 +37,12 @@ header{
 
 .navTop div{
     width: 300px;
+    text-align: center;
 }
 
-/* TOPREDES*/
 
+/* TOPREDES*/
 .topRedes{
-    height: 100%;
-    text-align: center;
     font-size: 19px;
 }
 
@@ -53,21 +51,20 @@ header{
     color: var(--color-1);
 }
 
-
 .topRedes a i:hover{
     color: var(--color-2);
 }
 
 
 /* TOPLOGO */
-
 .topLogo{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .topLogo a{
-    margin: 15px 0;
+    width: 100%;
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
@@ -80,15 +77,19 @@ header{
 
 
 /* TOPBUSCADOR */
+.topBuscador{
+    display: flex;
+    justify-content: center;
+}
 
 .buscadorTexto{
-    width: 250px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .buscadorLupa{
-    width: auto;
     background-color: transparent;
     border: none;
+    font-size: 20px;
 }
 
 .buscadorLupa i{
@@ -99,15 +100,15 @@ header{
     color: var(--color-2);
 }
 
-/* MENU HAMBURGESA */
 
+/* MENU HAMBURGESA */
 .menuHamburgesa {
     width: 150px;
     font-size: 13px;
     margin: 5px;
     color: var(--color-1);
     cursor: pointer;
-    /* display: none; */
+    display: none;
 
 }
 
@@ -127,28 +128,28 @@ header{
 
 
 /* NAVBAR */
-
 .navBar {    
     width: 70%;
     margin: 0 auto;
-    padding-top: 40px ;
+    padding: 30px 0px;
     border-top: 0.5px solid var(--color-5);
     display: block;
-    justify-content: space-around;
     list-style: none;
+    text-align: center;
 }
 
 .navLink, .dropdown{
-    display: flex;
-    align-items: center;
+    display: inline;
 }
 
 .navLink a, .btn {
+    height: 45px;
     font-size: 20px;
+    margin: 0 10px;
     text-decoration: none;
     color: var(--color-1);
     background-color: transparent;
-    padding: 0.375rem 0.75rem ;
+    padding: 0.375rem 0.75rem;
 }
 
 .btn-secondary:hover, .navLink a:hover {
@@ -156,8 +157,8 @@ header{
     background-color: transparent;
 }
 
-/* NAVBAR DROPDOWN */
 
+/* NAVBAR DROPDOWN */
 .dropdown a{
     text-decoration: none;
     color: var(--color-1);
@@ -194,19 +195,47 @@ header{
 
 /* RESPONSIVE PARA TABLETS */
 
-@media (max-width: 1024px){
-    
+@media (max-width: 1255px){
 
+    .navTop {
+        height: 55px;
+    }
+    
+    .navTop div{
+        width: 200px;
+    }
+
+    .topRedes{
+        font-size: 16px;
+    }
+
+    .topLogo a{
+        font-size: 40px;
+    }
+
+    .buscadorTexto{
+        width: 150px;
+    }
+    
+    .buscadorLupa{
+        font-size: 20px;
+    }
+
+    .navBar{
+        width: 90%;
+    }
+
+    .navLink a, .btn{
+        font-size: 12px;
+        height: auto;
+    }
 }
+
+
 
 /* RESPONSIVE PARA CELULARES */
 
-@media (max-width: 700px){ /*Esto va en 700px*/
-
-    header {
-        display: flex;
-        flex-wrap: nowrap;
-    }
+@media (max-width: 750px){
 
     .navTop {
         display: inline;
@@ -221,52 +250,23 @@ header{
     }
 
     .navBottom {
-        /* display: inline; */
         text-align: end;
     }
 
-    .b
-
-    .navBar {
-        display: none;
+    .menuHamburgesa{
+        display: inline;
     }
 
-    /* .navBottom {
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
-    
-}
+    .navBar {
+        position: fixed;
+        right: -100%;
+    }
 
-/* .menuHamburgesa {
-    display: block;
-}
+    .menuHamburgesa i{
+        display: block;
+    }
 
-nav {
-    width: 100%;
+    #check:checked ~ .navBar {
+        right: 0;
+    }
 }
-
-.navBar {
-    position: fixed;
-    width: 100%;
-    height: 80vh;
-    background-color: var(--color-4);
-    border-top: none;
-    padding-left: 0;
-    display: block;
-    right: -100%;
-    transition: transform 1s;
-}
-
-.navLink, .dropdown{
-    display: block;
-}
-
-.navLink a:hover, .navLink a:active{
-    background: none;
-}
-#check:checked ~ .navBar {
-    right: 0;
-}
-*/
