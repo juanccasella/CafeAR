@@ -87,6 +87,7 @@ header{
 }
 
 .buscadorLupa{
+    margin-left: 5%;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -237,12 +238,15 @@ header{
 
 @media (max-width: 750px){
 
-    .navTop {
-        display: inline;
+    .topLogo, .topBuscador, .menuHamburgesa i{
+        display: inline-block;
     }
 
-    .navTop div{
-        width: 100%;
+
+
+
+    .navTop {
+        margin:10px ;
     }
 
     .topRedes {
