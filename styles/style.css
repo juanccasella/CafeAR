@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-1: #F2F0D5;
+    --color-2: #D9CD91;
+    --color-3: #D9D0A7;
+    --color-4: #594A1D;
+    --color-5: #8C783B;
+    --color-6: #3f3414;
+}
+
+body{
+    background-color: var(--color-6) !important;
+}
+
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* NAVTOP */
+.navTop {
+    margin: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.navTop div{
+    width: 300px;
+    text-align: center;
+}
+
+
+/* TOPREDES*/
+.topRedes{
+    font-size: 19px;
+}
+
+.topRedes a i {
+    margin: 5px;
+    color: var(--color-1);
+}
+
+.topRedes a i:hover{
+    color: var(--color-2);
+}
+
+
+/* TOPLOGO */
+.topLogo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.topLogo a{
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.topLogo a:hover{
+    color: var(--color-2);
+}
+
+
+/* TOPBUSCADOR */
+.topBuscador{
+    display: flex;
+    justify-content: center;
+}
+
+.buscadorTexto{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buscadorLupa{
+    margin-left: 5%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.buscadorLupa i{
+    color: var(--color-1);
+}
+
+.buscadorLupa i:hover{
+    color: var(--color-2);
+}
+
+
+/* MENU HAMBURGESA */
+
+.topMenuHamburgesa{
+    display: none;
+}
+
+.menuHamburgesa {
+    width: 150px;
+    font-size: 13px;
+    margin: 5px;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+.menuHamburgesa i{
+    display: flex;
+    justify-content: center;
+    color: var(--color-1);
+}
+
+.menuHamburgesa i:hover{
+    color: var(--color-2);
+}
+
+#check {
+    display: none;
+}
+
+
+
+/* NAVBAR */
+.navBar {    
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0px;
+    border-top: 0.5px solid var(--color-5);
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+
+.navLink, .dropdown{
+    display: inline;
+}
+
+.navLink a, .btn {
+    height: 45px;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--color-1);
+    background-color: transparent;
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-secondary:hover, .navLink a:hover {
+    color: var(--color-2);
+    background-color: transparent;
+}
+
+
+/* NAVBAR DROPDOWN */
+.dropdown a{
+    text-decoration: none;
+    color: var(--color-1);
+    background-color: var(--color-6);
+    border: var(--color-6);
+}
+
+.dropdown a:hover {
+    border-color: var(--color-5);
+}
+
+.redes-dropdown:active,
+.redes-dropdown:focus,
+.btn-secondary {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.dropdown-menu.show {
+    background-color: var(--color-5);
+    padding: 0px !important;
+}
+
+.dropdown-item {
+    background-color: transparent !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-2) !important;
+    color: var(--color-6) !important;
+    border-radius: 0.25rem;
+}
+
+
+/* RESPONSIVE PARA TABLETS */
+
+@media (max-width: 1255px){
+
+    .navTop {
+        height: 55px;
+    }
+    
+    .navTop div{
+        width: 200px;
+    }
+
+    .topRedes{
+        font-size: 16px;
+    }
+
+    .topLogo a{
+        font-size: 40px;
+    }
+
+    .buscadorTexto{
+        width: 150px;
+    }
+    
+    .buscadorLupa{
+        font-size: 20px;
+    }
+
+    .navBar{
+        width: 100%;
+    }
+
+    .navLink a, .btn{
+        font-size: 12px;
+        height: auto;
+    }
+}
+
+
+
+/* RESPONSIVE PARA CELULARES */
+
+@media (max-width: 750px){
+
+    header {
+        display: flex;
+        justify-content: space-between; /* Esto distribuirá los elementos a lo largo de la línea */
+        align-items: center; /* Esto centrará verticalmente los elementos */
+    }
+
+    .navTop {
+        display: flex; /* Convertir en contenedor flexible */
+        justify-content: space-between; /* Distribuir los elementos en el espacio disponible */
+        align-items: center; /* Centrar verticalmente los elementos */
+    }
+    
+    .navTop div{
+        width: 100%;
+    }
+
+    .topLogo,
+    .topMenuHamburgesa,
+    .topBuscador{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+    
+    .topLogo,
+    .topBuscador{
+        width: 40%;
+    }
+
+    .topBuscador{
+        width: 20%;
+    }
+
+    .topRedes {
+        display: none;
+    }
+    
+    .navBar{
+        display: none;
+    }
+
+    .navLink, .dropdown{
+        display: block;
+        width: 100% !important;
+    }
+
+    .navBarHamburgesa {
+        padding: 0;
+        margin-top: 80px;
+        display: block;
+        border-top: 0px;
+        position: fixed;
+        right: -200%;
+    }
+
+    #check:checked ~ .navBarHamburgesa {
+        right: 0;
+    }
+}
