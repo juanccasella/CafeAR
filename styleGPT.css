@@ -14,136 +14,77 @@
     --color-6: #3f3414;
 }
 
-body{
-    background-color: var(--color-6) !important;
+body {
+    background-color: var(--color-6);
 }
 
-
 /* HEADER */
-header{
+header {
     display: flex;
     flex-direction: column;
 }
 
-
 /* NAVTOP */
 .navTop {
-    margin: auto 10%;
+    margin: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 0.5px solid var(--color-5);
 }
 
-.navTop div{
-    width: 300px;
-    text-align: center;
-}
-
-
-/* TOPREDES*/
-.topRedes{
-    font-size: 19px;
+.navTop div {
     display: flex;
-    align-items: start;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.topRedes a i {
+.topRedes a i,
+.menuHamburgesa i {
     margin: 5px;
     color: var(--color-1);
 }
 
-.topRedes a i:hover{
+.topRedes a i:hover,
+.menuHamburgesa i:hover {
     color: var(--color-2);
 }
 
-
-/* TOPLOGO */
-.topLogo{
-    display: flex;
-    text-align: center;
-}
-
-.topLogo a{
-    width: 100%;
+.topLogo a {
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     color: var(--color-1);
 }
 
-.topLogo a:hover{
+.topLogo a:hover {
     color: var(--color-2);
 }
 
-
-/* TOPBUSCADOR */
-.topBuscador{
-    display: flex;
-    justify-content: center;
-}
-
-.buscadorTexto{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.buscadorLupa{
-    margin-left: 5%;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-}
-
-.buscadorLupa i{
-    color: var(--color-1);
-}
-
-.buscadorLupa i:hover{
-    color: var(--color-2);
-}
-
-
-/* MENU HAMBURGESA */
-
-.topMenuHamburgesa{
+/* TOPMENU */
+.topMenuHamburgesa {
     display: none;
 }
-
-.menuHamburgesa {
-    font-size: 15px;
-    margin: 5px;
-    color: var(--color-1);
-    cursor: pointer;
-}
-
-.menuHamburgesa i{
-    display: flex;
-    color: var(--color-1);
-}
-
-.menuHamburgesa i:hover{
-    color: var(--color-2);
-}
-
-#check {
-    display: none;
-}
-
 
 /* NAVBAR */
-.navBar {    
+.navBar {
     width: 80%;
     margin: 0 auto;
-    padding: 30px 0px;
+    padding: 30px 0;
     border-top: 0.5px solid var(--color-5);
+    display: none;
     list-style: none;
     text-align: center;
 }
 
-.navLink, .dropdown{
+.navLink,
+.dropdown {
     display: inline;
 }
 
-.navLink a, .btn {
+.navLink a,
+.btn {
     height: 45px;
     font-size: 20px;
     margin: 0 10px;
@@ -153,14 +94,13 @@ header{
     padding: 0.375rem 0.75rem;
 }
 
-.btn-secondary:hover, .navLink a:hover {
+.btn-secondary:hover,
+.navLink a:hover {
     color: var(--color-2);
     background-color: transparent;
 }
 
-
-/* NAVBAR DROPDOWN */
-.dropdown a{
+.dropdown a {
     text-decoration: none;
     color: var(--color-1);
     background-color: var(--color-6);
@@ -174,13 +114,13 @@ header{
 .redes-dropdown:active,
 .redes-dropdown:focus,
 .btn-secondary {
-    box-shadow: none !important;
-    border-color: transparent !important;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .dropdown-menu.show {
     background-color: var(--color-5);
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 .dropdown-item {
@@ -193,47 +133,41 @@ header{
     border-radius: 0.25rem;
 }
 
-
 /* RESPONSIVE PARA TABLETS */
-
-@media (max-width: 1255px){
-    
-    .navTop div{
+@media (max-width: 1255px) {
+    .navTop div {
         width: 200px;
     }
 
-    .topRedes{
+    .topRedes {
         font-size: 16px;
     }
 
-    .topLogo a{
+    .topLogo a {
         font-size: 40px;
     }
 
-    .buscadorTexto{
+    .buscadorTexto {
         width: 150px;
     }
-    
-    .buscadorLupa{
+
+    .buscadorLupa {
         font-size: 20px;
     }
 
-    .navBar{
+    .navBar {
         width: 80%;
     }
 
-    .navLink a, .btn{
+    .navLink a,
+    .btn {
         font-size: 12px;
         height: auto;
     }
 }
 
-
-
 /* RESPONSIVE PARA CELULARES */
-
-@media (max-width: 750px){
-
+@media (max-width: 750px) {
     header {
         position: fixed;
         width: 100%;
@@ -242,6 +176,7 @@ header{
     }
 
     .navTop {
+        margin: 0;
         margin: 10px;
         padding-bottom: 10px;
         display: flex;
@@ -249,68 +184,59 @@ header{
         align-items: center;
         border-bottom: 0.5px solid var(--color-5);
     }
-    
-    .navTop div{
+
+    .navTop div {
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: space-around;
     }
 
-    .topLogo{
+    .topLogo {
         margin-right: auto;
-        width: auto;    
+        width: auto;
     }
 
-    .topLogo a{
+    .topLogo a {
         font-size: 20px;
     }
 
-    .buscadorTexto{
+    .buscadorTexto {
         height: 15px;
     }
 
-    .buscadorLupa{
+    .buscadorLupa {
         font-size: 15px;
     }
 
-    .topMenuHamburgesa{
-        width: auto !important;
+    .topMenuHamburgesa {
+        width: auto;
         margin-left: 5%;
     }
 
     .topRedes {
-        display: none !important;
-    }
-    
-    .navBar{
         display: none;
     }
 
-    .navLink, .dropdown{
+    .navBar {
+        display: none;
+    }
+
+    .navLink,
+    .dropdown {
         margin-top: 20px;
         display: block;
-        width: 100% !important;
+        width: 100%;
     }
 
     .navBarHamburgesa {
         width: 100%;
-        background-color: var(--color-2);
+        background-color: var(--color-6);
         padding-left: 0;
+        display: block;
         position: absolute;
         left: 50%;
         top: -400px;
         margin-top: 75px;
         transform: translate(-50%, -50%);
-    }
-
-    .navBarHamburgesa:hover{
-        background-color: var(--color-2);
-    }
-
-
-    
-    #check:checked ~ .navBarHamburgesa {
-        position: fixed;
-        top: 200px;
     }
 }
