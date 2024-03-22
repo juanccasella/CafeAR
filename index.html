@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link rel="stylesheet" href="./styles/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="./images/icon/bean1.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>CafeAR</title>
-</head>
-<body>
-    <header>
-        <div class="navTop">
-            <div class="topRedes">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+        <link rel="stylesheet" href="./styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" href="./images/icon/bean1.png" type="image/png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>CafeAR</title>
+    </head>
+    <body>
+        <header>
+            <div class="navTop">
+                <div class="topRedes">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+                <div class="topLogo">
+                    <a href="./index.html">CAFÉAR</a ><!-- En un futuro va a ser una img -->
+                </div>
+                <div class="topBuscador">
+                    <input class="buscadorTexto" type="text" placeholder="Buscar...">
+                    <button class="buscadorLupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="topMenuHamburgesa">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="menuHamburgesa">
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </label>
+                    <ul class="navBarHamburgesa" id="navBar">
+                        <li class="navLink"><a href="./index.html">INICIO</a></li>
+                        <li class="navLink"><a href="./pages/historia.html">HISTORIA</a></li>
+                        <li class="navLink"><a href="./pages/granos.html">GRANOS</a></li>
+                        <li class="navLink">
+                            <div class="dropdown redes-dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    CAFETERAS
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" target="_blank">INMERSIÓN</a></li>
+                                    <li><a class="dropdown-item" href="#" target="_blank">GOTEO</a></li>
+                                </ul>
+                        </li>
+                        <li class="navLink"><a href="./pages/tiposDeCafe.html">RECETAS</a></li>
+                        <li class="navLink"><a href="./pages/foro.html">FORO</a></li>
+                        <li class="navLink">
+                            <div class="dropdown redes-dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    REDES
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
+                                <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+                                <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank">GMAIL</a></li>
+                                <li><a class="dropdown-item" href="https://twitter.com/" target="_blank">TWITTER</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="topLogo">
-                <a href="./index.html">CAFÉAR</a ><!-- En un futuro va a ser una img -->
-            </div>
-            <div class="topBuscador">
-                <input class="buscadorTexto" type="text" placeholder="">
-                <button class="buscadorLupa"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <div class="topMenuHamburgesa">
-                <input type="checkbox" id="check">
-                <label for="check" class="menuHamburgesa">
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                </label>
-                <ul class="navBarHamburgesa" id="navBar">
+            <div class="navBottom">
+                <ul class="navBar" id="navBar">
                     <li class="navLink"><a href="./index.html">INICIO</a></li>
                     <li class="navLink"><a href="./pages/historia.html">HISTORIA</a></li>
                     <li class="navLink"><a href="./pages/granos.html">GRANOS</a></li>
@@ -52,54 +85,21 @@
                                 REDES
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> FACEBOOK</a></li>
-                            <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> INSTAGRAM</a></li>
-                            <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i> GMAIL</a></li>
-                            <li><a class="dropdown-item" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i> TWITTER</a></li>
+                                <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+                            <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank">GMAIL</a></li>
+                            <li><a class="dropdown-item" href="https://twitter.com/" target="_blank">TWITTER</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <div class="navBottom">
-            <ul class="navBar" id="navBar">
-                <li class="navLink"><a href="./index.html">INICIO</a></li>
-                <li class="navLink"><a href="./pages/historia.html">HISTORIA</a></li>
-                <li class="navLink"><a href="./pages/granos.html">GRANOS</a></li>
-                <li class="navLink">
-                    <div class="dropdown redes-dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CAFETERAS
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" target="_blank">INMERSIÓN</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">GOTEO</a></li>
-                        </ul>
-                </li>
-                <li class="navLink"><a href="./pages/tiposDeCafe.html">RECETAS</a></li>
-                <li class="navLink"><a href="./pages/foro.html">FORO</a></li>
-                <li class="navLink">
-                    <div class="dropdown redes-dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            REDES
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> FACEBOOK</a></li>
-                        <li><a class="dropdown-item" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> INSTAGRAM</a></li>
-                        <li><a class="dropdown-item" href="https://www.google.com/intl/es/gmail/about/" target="_blank"><i class="fa-solid fa-envelope"></i> GMAIL</a></li>
-                        <li><a class="dropdown-item" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i> TWITTER</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>  
-    </header>
-    <section>
-        
-    </section>
-    <footer>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+            </div>  
+        </header>
+        <section>
+        </section>
+        <footer>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html> 
+

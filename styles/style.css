@@ -42,9 +42,11 @@ header{
 
 /* TOPREDES*/
 .topRedes{
-    font-size: 19px;
+    font-size: 15px;
     display: flex;
     align-items: start;
+    height: 70px;
+    margin-top: 10px;
 }
 
 .topRedes a i {
@@ -65,7 +67,7 @@ header{
 
 .topLogo a{
     width: 100%;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-decoration: none;
     color: var(--color-1);
@@ -80,25 +82,39 @@ header{
 .topBuscador{
     display: flex;
     justify-content: center;
+    position: relative;
+    height: 25px;
 }
 
 .buscadorTexto{
-    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    padding: 10px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 0.8rem;
+}
+
+.buscadorTexto:focus{
+    font-weight: normal;
 }
 
 .buscadorLupa{
-    margin-left: 5%;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
+    background-color: var(--color-2);
+    padding: 0 15px;
+    position: relative;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8rem;;
 }
 
-.buscadorLupa i{
-    color: var(--color-1);
-}
-
-.buscadorLupa i:hover{
-    color: var(--color-2);
+.buscadorLupa:hover{
+    color: var(--color-6);
 }
 
 
@@ -143,14 +159,16 @@ header{
     display: inline;
 }
 
-.navLink a, .btn {
-    height: 45px;
-    font-size: 20px;
+.navLink a{
+    display: inline-block;
+    height: 35px;
+    font-size: 18px;
     margin: 0 10px;
     text-decoration: none;
     color: var(--color-1);
     background-color: transparent;
     padding: 0.375rem 0.75rem;
+    vertical-align: unset;
 }
 
 .btn-secondary:hover, .navLink a:hover {
@@ -161,6 +179,7 @@ header{
 
 /* NAVBAR DROPDOWN */
 .dropdown a{
+    margin: 0;
     text-decoration: none;
     color: var(--color-1);
     background-color: var(--color-6);
@@ -210,16 +229,20 @@ header{
         font-size: 40px;
     }
 
+    .topBuscador{
+        height: 25px;
+    }
+
     .buscadorTexto{
-        width: 150px;
+        font-size: 0.7rem;
     }
     
-    .buscadorLupa{
-        font-size: 20px;
+    .buscadorLupa{ 
+        font-size: 0.7rem;
     }
 
     .navBar{
-        width: 80%;
+        width: 90%;
     }
 
     .navLink a, .btn{
@@ -232,17 +255,15 @@ header{
 
 /* RESPONSIVE PARA CELULARES */
 
-@media (max-width: 750px){
+@media (max-width: 785px){
 
     header {
-        position: fixed;
-        width: 100%;
         display: flex;
         justify-content: space-around;
     }
 
     .navTop {
-        margin: 10px;
+        margin: 10px 0 0 0;
         padding-bottom: 10px;
         display: flex;
         justify-content: flex-end;
@@ -266,11 +287,12 @@ header{
     }
 
     .buscadorTexto{
-        height: 15px;
+        height: 0.5rem;
     }
 
     .buscadorLupa{
-        font-size: 15px;
+        height: 20px;
+        font-size: 0.5rem;
     }
 
     .topMenuHamburgesa{
@@ -299,18 +321,16 @@ header{
         position: absolute;
         left: 50%;
         top: -400px;
-        margin-top: 75px;
+        margin-top: 51px;
         transform: translate(-50%, -50%);
     }
 
     .navBarHamburgesa:hover{
         background-color: var(--color-2);
     }
-
-
     
     #check:checked ~ .navBarHamburgesa {
         position: fixed;
-        top: 200px;
+        top: 175px;
     }
 }
