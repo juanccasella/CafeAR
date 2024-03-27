@@ -52,10 +52,12 @@ header{
 .topRedes a i {
     margin: 5px;
     color: var(--color-1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .topRedes a i:hover{
     color: var(--color-2);
+    transform: scale(1.05);
 }
 
 
@@ -71,10 +73,12 @@ header{
     font-weight: bold;
     text-decoration: none;
     color: var(--color-1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .topLogo a:hover{
     color: var(--color-2);
+    transform: scale(1.05);
 }
 
 
@@ -93,7 +97,12 @@ header{
     border-radius: 5px;
     border: 0;
     outline: none;
-    font-size: 0.8rem;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.buscadorTexto:hover{
+    transform: scale(1.05);
 }
 
 .buscadorTexto:focus{
@@ -110,11 +119,12 @@ header{
     right: 0;
     border-radius: 5px;
     color: white;
-    font-size: 0.8rem;;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .buscadorLupa:hover{
-    color: var(--color-6);
+    transform: scale(1.05);
 }
 
 
@@ -134,10 +144,12 @@ header{
 .menuHamburgesa i{
     display: flex;
     color: var(--color-1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .menuHamburgesa i:hover{
     color: var(--color-2);
+    transform: scale(1.05);
 }
 
 #check {
@@ -159,7 +171,7 @@ header{
     display: inline;
 }
 
-.navLink a{
+.navLink a, .btn-secondary {
     display: inline-block;
     height: 35px;
     font-size: 18px;
@@ -169,11 +181,13 @@ header{
     background-color: transparent;
     padding: 0.375rem 0.75rem;
     vertical-align: unset;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .btn-secondary:hover, .navLink a:hover {
     color: var(--color-2);
     background-color: transparent;
+    transform: scale(1.05);
 }
 
 
@@ -184,10 +198,12 @@ header{
     color: var(--color-1);
     background-color: var(--color-6);
     border: var(--color-6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .dropdown a:hover {
     border-color: var(--color-5);
+    transform: scale(1.05);
 }
 
 .redes-dropdown:active,
@@ -204,12 +220,14 @@ header{
 
 .dropdown-item {
     background-color: transparent !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .dropdown-item:hover {
     background-color: var(--color-2) !important;
     color: var(--color-6) !important;
     border-radius: 0.25rem;
+    transform: scale(1.05);
 }
 
 
@@ -323,10 +341,12 @@ header{
         top: -400px;
         margin-top: 51px;
         transform: translate(-50%, -50%);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
-
+    
     .navBarHamburgesa:hover{
         background-color: var(--color-2);
+        transform: scale(1.05);
     }
     
     #check:checked ~ .navBarHamburgesa {
